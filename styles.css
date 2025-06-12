@@ -1,1 +1,77 @@
+body{
+  cursor: url("Images/cursor.png"), auto;
+}
 
+a:hover {
+  cursor: url("Images/cursor.png"), auto;
+}
+::selection {
+  background-color: #e83e8c;
+  color:blue;
+  text-shadow: 0 0 10px white;
+  cursor: url("Images/text-select.png");
+}
+
+.glassmorphism {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.4px);
+  -webkit-backdrop-filter: blur(1.4px);
+  border-bottom: solid white;
+}
+
+.website-background{
+  background-color: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.navbar-font {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.background-image {
+    height: 100vh;
+    background-image: url('Images/33319775_fht6.jpg');
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e83e8c;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation.hover::after {
+  transform-origin: bottom left;
+}
